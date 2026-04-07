@@ -1,0 +1,43 @@
+# ==============================
+# AntiLootSteal Configuration
+# ==============================
+
+# Protection timer in seconds
+protection-duration: 15
+
+# Worlds where protection is enabled (empty list = all worlds)
+enabled-worlds: []
+
+# Worlds where protection is explicitly disabled
+disabled-worlds:
+  - world_creative
+
+# Entity types whose drops are protected when killed by a player
+protected-entities:
+  players: true
+  zombies: true
+  animals: true
+
+# Hologram settings
+hologram:
+  enabled: true
+  # Height offset above the item
+  y-offset: 1.2
+  # Color codes for different time remaining
+  color-high: "&a"       # green (high time remaining)
+  color-medium: "&e"     # yellow (medium time remaining)
+  color-low: "&c"        # red (low time remaining)
+  # Thresholds in seconds for color transitions
+  medium-threshold: 10
+  low-threshold: 5
+  # Display format: {color} = color code, {time} = seconds left, {player} = killer name
+  format: "{color}&l{time}s &7| &f{player}'s loot"
+  # How often to update hologram text (in ticks, 20 = 1 second)
+  update-interval: 20
+
+# Messages (supports & color codes)
+messages:
+  loot-protected: "&c&lAntiLootSteal &8> &7This loot belongs to &e{player}&7! Wait &e{time}s&7."
+  loot-expired: "&a&lAntiLootSteal &8> &7Loot protection has expired. Items are now free."
+  reload-success: "&a&lAntiLootSteal &8> &7Config reloaded successfully."
+  no-permission: "&c&lAntiLootSteal &8> &7You don't have permission to do that."

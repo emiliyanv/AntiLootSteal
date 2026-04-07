@@ -1,0 +1,22 @@
+name: AntiLootSteal
+version: ${project.version}
+main: com.antilootsteal.AntiLootSteal
+description: Protects loot drops so only the killer can pick them up
+authors: [AntiLootSteal]
+
+commands:
+  antilootsteal:
+    description: AntiLootSteal admin command
+    usage: /antilootsteal reload
+    aliases: [als]
+
+permissions:
+  antilootsteal.protect:
+    description: Your kills produce protected loot
+    default: true
+  antilootsteal.bypass:
+    description: Bypass loot protection and pick up any loot
+    default: op
+  antilootsteal.admin:
+    description: Access to reload and admin commands
+    default: op

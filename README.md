@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/26578268/README.md)
+
 <div align="center">
 
 # 🔴 Anti**Loot**Steal 🔴
